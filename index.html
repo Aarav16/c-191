@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Electric ship </title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    </head>
+
+    <body>
+      <a-scene>
+       <a-entity movement-controls="speed: 0.2; constrainToNavMesh: true " position="0 0 2">
+        <a-entity id="look" look-controls camera position="5 5 110" look-controls="pointerLockEnabled:false">
+            <a-cursor></a-cursor>
+        </a-entity>
+    </a-entity>
+        
+    <a-plane src="assets/blue-water-waves.jpeg" width="400px" height="500px"></a-plane>
+        <a-asset-item id="Ship.gltf" src="assets/ship.glb"></a-asset-item>
+        <a-entity>
+            <a-entity position="-80 8 7" rotation="90 7 0" scale="0.50 0.50 0.50 " gltf-model="#Ship.gltf" width="2000" height="2000"></a-entity>
+    
+    </a-scene>
+    </body>
+    
+    
+</html>
